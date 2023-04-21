@@ -1,0 +1,68 @@
+.cont-treatment-1{
+    margin-left: 2rem;
+    width: 23rem;
+    height: 23rem;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    border-radius: 1rem;
+
+}
+.cont-treatment-1:hover {
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+.cont-all{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 7%;
+    top: -5%;
+}
+.cont-treatment:hover {
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.img-logo{
+    width: 4.2rem;
+    margin-top: 3rem;
+}
+.title-treatment-1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(3, 45, 101);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 18rem;
+}
+.text-treatment-1{
+    color: rgb(64, 64, 64);
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+    width: 15rem;
+    font-size: 0.9rem;
+}
+.arrow{
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+.appointment-btn{
+    font-family: 'Exo', sans-serif;
+    font-weight: 500;
+    background-color: rgb(3, 45, 101);
+    border-color: rgb(3, 45, 101);
+    width: 8.5rem;
+}
+
+@media(max-width:450px){
+    .cont-treatment-1{
+        width: 18rem;
+    }
+    .title-treatment-1{
+        font-size: 1.2rem;
+        
+        width: 14rem;
+    }
+    .text-treatment-1{
+        width: 15rem;
+        font-size: 0.85rem;
+    }
+}

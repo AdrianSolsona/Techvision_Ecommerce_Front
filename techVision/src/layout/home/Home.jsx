@@ -1,12 +1,12 @@
 import React from 'react'
-
+import { NavBar } from '../../components/Navbar/NavBar';
 import './Home.css';
 
 
 
 export const Home = () => {
     return (
-        <h1>hola</h1>
+        <NavBar className='navigator'/>
         
     )
 };

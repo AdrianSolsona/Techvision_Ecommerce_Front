@@ -1,0 +1,65 @@
+.loginSendDeac {
+
+    color: #fff;
+    background-color: rgb(3, 45, 101);
+    border-color: #007bff;
+    font-family: 'Exo', sans-serif;
+    border-radius: 0.4rem; /* Agrega un borde redondeado */
+    padding: 0.5rem 1rem; /* Agrega un padding a los lados */
+    font-size: 1rem; /* Tamaño de fuente */
+    margin-top: 2rem;
+    line-height: 1.5; /* Altura de línea */
+    text-align: center; /* Alineación de texto */
+    text-decoration: none; /* Elimina la subraya del enlace si se aplica */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse sobre el botón */
+    transition: all 0.15s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    /*
+    background-color: rgb(3, 45, 101);
+    border-color: rgb(3, 45, 101);
+    font-family: 'Exo', sans-serif;
+    width: 8rem;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    
+    height: 2em;
+    width: 9em;
+
+    background-color: tomato;
+
+    border-radius: 0.2em;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+.loginSendAct {
+    
+    cursor: pointer;
+    background-color: rgb(26, 101, 199);
+    width: 7rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginSendAct:hover {
+
+    transition: 1s;
+    /*background-color: darkred;*/
+    background-color: rgba(255, 255, 255, 0.74);
+    color: rgb(3, 45, 101);
+    font-family: 'Exo', sans-serif;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
