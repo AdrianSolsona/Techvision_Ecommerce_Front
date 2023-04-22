@@ -26,9 +26,10 @@
     top: 27%;
     right: 4%;
     font-family: 'Catamaran', sans-serif;
-    width: 25rem;
+    width: 26rem;
     left: -100px;
     animation: animation-div-2 1s ease-in-out forwards;
+    letter-spacing: 0.1rem;
 }
 .best{
     color: rgb(0, 0, 0);
@@ -43,7 +44,8 @@
 .all-categories{
     display: flex;
     gap: 10rem;
-    margin-top: 5rem;
+    margin-top: 6rem;
+    letter-spacing: 0.1rem;
 }
 
 .categories-home{
@@ -63,8 +65,10 @@
     color: black;
 }
 .filter{
-    margin-left: 20rem;
+    margin-left: 32rem;
     color: black;
+    position: relative;
+    left: 5%;
 }
 .container-products{
     width: 150rem;

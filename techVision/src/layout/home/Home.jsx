@@ -5,7 +5,7 @@ import productPrincipal from '../../assets/iphone-13-pro-max-plata-5-1-500.png';
 import productMac from '../../assets/mac-prp-1.png'
 import CardComponent from '../../components/Card/Card';
 import { Col, Container, Row } from 'react-bootstrap';
-
+import { Footer } from '../../components/Footer/Footer';
 
 
 export const Home = () => {
@@ -99,6 +99,7 @@ export const Home = () => {
                 </Col>
             </Row>
         </Container>
+        <Footer/>
         </>
     )
 };

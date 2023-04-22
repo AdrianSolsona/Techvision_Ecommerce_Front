@@ -38,6 +38,7 @@
     position: relative;
     top: 5%;
     left: 5%;
+    letter-spacing: 0.1rem;
 }
 .text-treatment-1{
     color: rgb(64, 64, 64);
@@ -57,11 +58,12 @@
     font-size: 0.75rem;
     background-color: black;
     border-color: white;
-    width: 7rem;
+    width: 7.5rem;
     border-radius: 0;
     margin-top: 4.7rem;
     opacity: 0;
     transition: all 1s ease-in-out;
+    letter-spacing: 0.1rem;
 }
 .appointment-btn:hover{
     background-color: rgb(112, 112, 112);

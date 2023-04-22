@@ -10,6 +10,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 6rem;
+    letter-spacing: 0.1rem;
 }
 .row-nav{
     display: flex;
