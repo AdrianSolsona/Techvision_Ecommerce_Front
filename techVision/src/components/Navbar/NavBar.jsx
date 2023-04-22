@@ -33,7 +33,7 @@ export const NavBar = () => {
                 {!datosCredencialesRedux?.credentials?.decodificado?.rolId ? (
                 <> 
                   <div className='nav-init'>
-                      <Navigator ruta={"HOME"} destino={"/"} />
+                      <div className='home-dif'><Navigator ruta={"HOME"} destino={"/"} /></div>
                       <Navigator ruta={"SHOP"} destino={"/treatments"} />
                       <Navigator ruta={"CONTACT"} destino={"/treatments"} />
                   </div>

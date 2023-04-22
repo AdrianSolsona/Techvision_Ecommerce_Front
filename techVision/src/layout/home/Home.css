@@ -16,7 +16,7 @@
     position: relative;
     left: 10%;
     top: -100px;
-    animation: animation-div 0.5s ease-in-out forwards;
+    animation: animation-div 1s ease-in-out forwards;
 
 }
 .text-product{
@@ -28,7 +28,7 @@
     font-family: 'Catamaran', sans-serif;
     width: 25rem;
     left: -100px;
-    animation: animation-div-2 0.5s ease-in-out forwards;
+    animation: animation-div-2 1s ease-in-out forwards;
 }
 .best{
     color: rgb(0, 0, 0);
@@ -39,6 +39,32 @@
     color: rgb(110, 110, 110);
     font-size: 1.2rem;
     font-weight: 400;
+}
+.all-categories{
+    display: flex;
+    gap: 10rem;
+    margin-top: 5rem;
+}
+
+.categories-home{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    gap: 3rem;
+    color: rgb(118, 118, 118);
+    font-weight: 700;
+    font-size: 0.8rem;
+    font-family: 'Catamaran', sans-serif;
+}
+.all{
+    color: black;
+}
+.filter{
+    margin-left: 20rem;
+    color: black;
 }
 
 @keyframes animation-div {

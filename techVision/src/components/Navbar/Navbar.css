@@ -57,7 +57,9 @@ body{
     position: relative;
     top: 5.5%;
 }
-
+.home-dif{
+    color: rgb(118, 118, 118)
+}
 .sesion{
     display: flex;
 }

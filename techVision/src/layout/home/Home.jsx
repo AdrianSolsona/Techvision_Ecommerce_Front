@@ -22,6 +22,19 @@ export const Home = () => {
                 </div>
             </div>
         </div>
+        <div className='all-categories'>
+            <div className='categories-home'>
+                <div className='all'>ALL</div>
+                <div>PHONE</div>
+                <div>COMPUTER</div>
+                <div>WATCH</div>
+                <div>HEADPHONES</div>
+                <div>ACCESORIES</div>
+                <div className='div-filter'>
+                    <div className='filter'>FILTER</div>
+                </div>
+            </div>
+        </div>
         
         </>
     )
