@@ -17,3 +17,13 @@
     margin-top: 3.5rem;
     color: rgb(118, 118, 118);;
 }
+.date-confirm{
+    color: black;
+    font-family: 'Catamaran', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+}

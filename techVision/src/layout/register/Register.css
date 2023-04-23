@@ -1,4 +1,37 @@
-.loginSendDeac {
+.container-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.route-register-2{
+    display: flex;
+    position: relative;
+    right: 9.7%;
+    cursor: pointer;
+    font-weight: 400;
+    font-family: 'Catamaran', sans-serif;
+    margin-top: 3.5rem;
+    color: rgb(118, 118, 118);;
+
+}
+.navigator-login{
+    font-weight: 500;
+    font-family: 'Catamaran', sans-serif;
+    margin-top: 3.5rem;
+    color: rgb(141, 141, 141);;
+}
+.container-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registerSendDeac {
 
     color: #fff;
     background-color: black;
@@ -20,37 +53,16 @@
     height: 3.8rem;
     font-weight: 600;
     letter-spacing: 0.1rem;
-    /*
-    background-color: rgb(3, 45, 101);
-    border-color: rgb(3, 45, 101);
-    font-family: 'Exo', sans-serif;
-    width: 8rem;
-    margin-top: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2.5rem;
     
-    height: 2em;
-    width: 9em;
-
-    background-color: tomato;
-
-    border-radius: 0.2em;
-    color: white;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;*/
 }
-.loginSendAct {
+.registerSendAct {
     
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.loginSendAct:hover {
+.registerSendAct:hover {
 
     transition: 1s;
     /*background-color: darkred;*/
@@ -62,4 +74,3 @@
     justify-content: center;
     align-items: center;
 }
-

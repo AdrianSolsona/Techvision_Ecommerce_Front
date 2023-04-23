@@ -46,6 +46,12 @@ body{
     display: flex;
     gap: 0.4rem;
 }
+.cart-buy{
+    font-size: 1.05rem;
+    display: flex;
+    position: relative;
+    top: 5.5%;
+}
 .icon-login{
     font-size: 1.1rem;
     display: flex;
@@ -56,7 +62,7 @@ body{
     font-size: 0.95rem;
     display: flex;
     position: relative;
-    top: 5.5%;
+    top: 6%;
 }
 .home-dif{
     color: rgb(118, 118, 118)

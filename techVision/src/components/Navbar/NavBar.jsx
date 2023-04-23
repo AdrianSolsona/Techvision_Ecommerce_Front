@@ -42,12 +42,15 @@ export const NavBar = () => {
                     <div className='link-title'>TECHV</div>
                   </div>
                   <div className='nav-init'>
+                    <div className='nav-login'>
+                      <i class="bi bi-cart2 cart-buy"></i> 
                       <Navigator ruta={"CART"} destino={"/register"} />
-                      <div className='nav-login'>
+                    </div>
+                    <div className='nav-login'>
                       <i class="bi bi-person icon-login"></i>
                       <Navigator ruta={"LOGIN"} destino={"/login"} />
-                      </div>
-                      <i class="bi bi-search icon-search"></i>
+                    </div>
+                    <i class="bi bi-search icon-search"></i>
                   </div>
                 </>  
                 ) :
@@ -57,18 +60,35 @@ export const NavBar = () => {
                       <Navigator ruta={"Inicio"} destino={"/"} />
                       <div onClick={()=>navigate("/users")}>Usuarios</div>
                       <div onClick={()=>navigate("/data/user")}>{datosCredencialesRedux?.credentials?.decodificado?.username}</div>
-                      <div onClick={() => {  navigate("/login"); logoutFunction();}}>Cerrar sesión</div>
+                      <div className='factordent'>
+                    <div className='link-title'>TECHV</div>
+                  </div>
+                      <div onClick={() => {  navigate("/login"); logoutFunction();}}>LOGOUT</div>
                   </div>  
                 </>       
     
                 ) : datosCredencialesRedux?.credentials?.decodificado?.rolId === 2 ? (
                 <>
                   <div className='nav-init'>
-                      <Navigator ruta={"Inicio"} destino={"/"} />
-                      <Navigator ruta={"Tratamientos"} destino={"/treatments"} />
-                      <div onClick={()=>navigate("/appointments")}>Citas</div>
-                      <div>{datosCredencialesRedux?.credentials?.decodificado?.username}</div>
-                      <div onClick={() => {  navigate("/login"); logoutFunction();}}>Cerrar sesión</div>
+                    <div className='home-dif'><Navigator ruta={"HOME"} destino={"/"} /></div>
+                    <Navigator ruta={"SHOP"} destino={"/shop"} />
+                    <div onClick={()=>navigate("/contact")}>CONTACT</div>
+                    <div>{datosCredencialesRedux?.credentials?.decodificado?.username}</div>
+                  </div>
+                  <div className='factordent'>
+                    <div className='link-title'>TECHV</div>
+                  </div>
+                  <div className='nav-init'>
+                    <div className='nav-login'>
+                      <i class="bi bi-cart2 cart-buy"></i> 
+                      <Navigator ruta={"CART"} destino={"/register"} />
+                    </div>
+                    <div className='nav-login'>
+                      <i class="bi bi-person icon-login"></i>
+                      <div onClick={() => {  navigate("/login"); logoutFunction();}}>LOGOUT</div>
+                    </div>
+                    <div><Navigator ruta={" MY PROFILE"} destino={"/profile"} /></div>
+                    <i class="bi bi-search icon-search"></i>
                   </div>
                 </>
                 ) : (

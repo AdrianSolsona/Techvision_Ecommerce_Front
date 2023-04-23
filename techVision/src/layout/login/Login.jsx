@@ -70,10 +70,10 @@ export const Login = () => {
                 
                 dispatch(login({credentials: datosBackend}));
                 
-                setWelcome(`¡Bienvenid@ de nuevo!`);
+                setWelcome(`WELCOME BACK!`);
                 
                 setTimeout(() => {
-                  navigate("/");
+                  navigate("/profile");
                 }, 2000);
                     }
                 )
