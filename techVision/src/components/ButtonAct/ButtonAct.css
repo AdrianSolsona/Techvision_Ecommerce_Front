@@ -1,13 +1,13 @@
 .loginSendDeac {
 
     color: #fff;
-    background-color: rgb(3, 45, 101);
-    border-color: #007bff;
-    font-family: 'Exo', sans-serif;
-    border-radius: 0.4rem; /* Agrega un borde redondeado */
+    background-color: black;
+    border-color: black;
+    font-family: 'Catamaran', sans-serif;
+    border-radius: 0.1rem; /* Agrega un borde redondeado */
     padding: 0.5rem 1rem; /* Agrega un padding a los lados */
     font-size: 1rem; /* Tamaño de fuente */
-    margin-top: 2rem;
+    margin-top: 1rem;
     line-height: 1.5; /* Altura de línea */
     text-align: center; /* Alineación de texto */
     text-decoration: none; /* Elimina la subraya del enlace si se aplica */
@@ -16,7 +16,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 7rem;
+    width: 20rem;
+    height: 3.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
     /*
     background-color: rgb(3, 45, 101);
     border-color: rgb(3, 45, 101);

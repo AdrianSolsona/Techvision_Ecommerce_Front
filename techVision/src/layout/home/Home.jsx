@@ -6,6 +6,8 @@ import productMac from '../../assets/mac-prp-1.png'
 import CardComponent from '../../components/Card/Card';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Footer } from '../../components/Footer/Footer';
+import { Navigator } from '../../components/Navigator/Navigator';
+import { useNavigate } from 'react-router-dom';
 
 
 export const Home = () => {

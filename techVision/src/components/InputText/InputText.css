@@ -1,0 +1,41 @@
+.inputBasicDesign {
+    display: block;
+    width: 20rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color:  rgb(110, 110, 110);
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid  #f5f5f5;
+    border-radius: 0.1rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    font-family: 'Catamaran', sans-serif;
+    border: 1px solid  #eeeeee;
+    margin-top: 1.5rem;
+    height: 3rem;
+  }
+  .inputBasicDesign:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: rgb(110, 110, 110);
+    outline: 0;
+    box-shadow: 0 0 0 0.3rem rgba(0, 0, 0, 0.25);
+    }  
+    .inputBasicDesign:disabled {
+    background-color: #e9ecef;
+    opacity: 1;
+    }
+    .inputBasicDesign[readonly] {
+    background-color: #e9ecef;
+    }
+    .inputBasicDesign::placeholder{
+        color:rgb(185, 185, 185);
+        font-weight: 500;
+        font-family: 'Catamaran', sans-serif;
+        margin-left: 1.5rem;
+    }
+    .inputErrorDesign {
+      border: 0.2em solid red;
+  }

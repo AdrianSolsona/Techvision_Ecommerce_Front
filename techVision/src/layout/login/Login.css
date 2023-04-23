@@ -1,0 +1,19 @@
+.all-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-icon{
+    font-size: 3.5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+}
+.route-register{
+    cursor: pointer;
+    font-weight: 400;
+    font-family: 'Catamaran', sans-serif;
+    margin-top: 3.5rem;
+    color: rgb(118, 118, 118);;
+}
