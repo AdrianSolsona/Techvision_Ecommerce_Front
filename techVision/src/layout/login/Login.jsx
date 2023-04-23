@@ -73,7 +73,7 @@ export const Login = () => {
                 setWelcome(`WELCOME BACK!`);
                 
                 setTimeout(() => {
-                  navigate("/profile");
+                  navigate("/");
                 }, 2000);
                     }
                 )

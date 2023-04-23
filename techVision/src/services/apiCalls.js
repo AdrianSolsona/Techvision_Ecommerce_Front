@@ -12,4 +12,24 @@ export const registerUser = async (body) => {
 
 }
 
+export const dataUsers = async (token) => {
+  let config = {
+    headers: { 
+      'Authorization': 'Bearer '+ token,  
+    }
+  };
+
+  return await axios.get(`${root}users`, config);
+}
+
+export const addressUsers = async (token) => {
+  let config = {
+    headers: { 
+      'Authorization': 'Bearer '+ token,  
+    }
+  };
+
+  return await axios.get(`${root}address`, config);
+}
+
 
