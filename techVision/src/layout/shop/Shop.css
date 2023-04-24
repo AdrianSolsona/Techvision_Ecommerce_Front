@@ -1,0 +1,66 @@
+.container-int{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.your-categories{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(118, 118, 118);
+    gap: 4rem;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: 'Catamaran', sans-serif;
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+}
+.categories-int:hover{
+    color: black;
+    transform: translateY(-2px);
+    transition: all 0.3s ease-in-out;
+}
+.the-latest{
+    display: flex;
+    position: relative;
+    left: 20.6%;
+    font-weight: 600;
+    font-size: 2rem;
+    font-family: 'Catamaran', sans-serif;
+    margin-bottom: 1rem;
+}
+.latest-container{
+    display: flex;
+    gap: 0.1rem;
+}
+.take{
+    color: rgb(118, 118, 118);;
+}
+.col-products{
+    margin-bottom: 10rem;
+}
+.cont-treatment-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.status{
+    display: flex;
+    position: relative;
+    top: 13%;
+    right: 120%;
+}
+.img-product-shop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 5rem;
+
+}
+.img-movil-shop{
+    width: 10rem;
+}

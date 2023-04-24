@@ -32,4 +32,15 @@ export const addressUsers = async (token) => {
   return await axios.get(`${root}address`, config);
 }
 
+export const allProducts = async (body) => {
+
+  return await axios.get(`${root}products/all`, body)
+
+}
+export const allCategories = async (body) => {
+
+  return await axios.get(`${root}categories/all`, body)
+
+}
+
 

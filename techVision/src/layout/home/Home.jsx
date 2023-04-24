@@ -53,6 +53,8 @@ export const Home = () => {
                     image={productMac}
                     showButton={true} 
                     title= "NEW"
+                    productName="IPHONE PRO MAX"
+                    price="1100"
                 /> 
                 </Col>
                 <Col md={6} lg={6} xl={4} xxl={3} className="card-container">

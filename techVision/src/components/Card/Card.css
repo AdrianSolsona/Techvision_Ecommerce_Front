@@ -24,7 +24,8 @@
 }
 .img-logo{
     width: 12rem;
-    margin-top: 5rem;
+    margin-top:4rem;
+    
 }
 .title-treatment-1{
     font-size: 0.85rem;
@@ -36,9 +37,10 @@
     font-family: 'Catamaran', sans-serif;
     display: flex;
     position: relative;
-    top: 5%;
-    left: 5%;
+    top: 23%;
+    left: 9%;
     letter-spacing: 0.1rem;
+    margin-bottom: 5rem;
 }
 .text-treatment-1{
     color: rgb(64, 64, 64);
@@ -46,7 +48,6 @@
     margin-bottom: 1.2rem;
     width: 15rem;
     font-size: 0.9rem;
-    
 }
 .arrow{
     font-size: 0.8rem;
@@ -60,7 +61,7 @@
     border-color: white;
     width: 7.5rem;
     border-radius: 0;
-    margin-top: 4.7rem;
+    margin-top: 5.9rem;
     opacity: 0;
     transition: all 1s ease-in-out;
     letter-spacing: 0.1rem;
@@ -71,6 +72,22 @@
 }
 .cont-treatment-1:hover .appointment-btn{
     opacity: 1;
+}
+.title-product-sh{
+    color: black;
+    font-weight: 500;
+    font-family: 'Catamaran', sans-serif;
+    letter-spacing: 0.1rem;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+.title-product-sh-2{
+    display: flex;
+    color: rgb(180, 180, 180);
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.1rem;
+    font-size: 1.1rem;
 }
 
 @media(max-width:450px){
