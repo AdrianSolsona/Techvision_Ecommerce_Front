@@ -67,6 +67,9 @@ body{
 .home-dif{
     color: rgb(118, 118, 118)
 }
+.image-prp{
+    width: 3.4rem;
+}
 .sesion{
     display: flex;
 }

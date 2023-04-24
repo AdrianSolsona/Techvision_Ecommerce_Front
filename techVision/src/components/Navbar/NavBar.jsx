@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 import { userData, userout } from '../../layout/userSlice';
 import { useDispatch } from 'react-redux';
 import {useEffect} from "react";
+import principalImage from"../../assets/logo-prp-1.jpg"
 
 
 export const NavBar = () => {
@@ -35,11 +36,11 @@ export const NavBar = () => {
                 <> 
                   <div className='nav-init'>
                       <div className='home-dif'><Navigator ruta={"HOME"} destino={"/"} /></div>
-                      <Navigator ruta={"SHOP"} destino={"/treatments"} />
-                      <Navigator ruta={"CONTACT"} destino={"/treatments"} />
+                      <Navigator ruta={"SHOP"} destino={"/shop"} />
+                      <Navigator ruta={"CONTACT"} destino={"/contact"} />
                   </div>
                   <div className='factordent'>
-                    <div className='link-title'>TECHV</div>
+                    <img className='image-prp' src={principalImage} alt="" />
                   </div>
                   <div className='nav-init'>
                     <div className='nav-login'>

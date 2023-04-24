@@ -1,82 +1,89 @@
-import React, {useState, useEffect} from 'react'
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { NavBar } from '../../components/Navbar/NavBar';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Footer } from '../../components/Footer/Footer';
 import { allCategories, allProducts } from '../../services/apiCalls';
-import productMac from '../../assets/mac-prp-1.png'
-import './shop.css'
+import productMac from '../../assets/mac-prp-1.png';
+import './shop.css';
 import CardComponent from '../../components/Card/Card';
 
-
 export const Shop = () => {
+  const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
-    const [product, setProduct] = useState([]);
-    const [category, setCategory] = useState([]);
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
+  useEffect(() => {
+    Promise.all([allCategories(), allProducts()])
+      .then(([categoryData, productData]) => {
+        setCategories(categoryData.data);
+        setProducts(productData.data);
+      })
+      .catch(error => console.log(error));
+  }, []);
 
-    useEffect(()=>{
-        if(product.length === 0){
-            Promise.all([
-                allCategories(),
-                allProducts()
-                
-            ])
-            .then(([categoryData, productData]) => {
-                setCategory(categoryData.data);
-                setProduct(productData.data);
-                    }
-                )
-                .catch(error => console.log(error));
-        }
+  const handleCategoryClick = categoryId => {
+    setSelectedCategory(categoryId);
+  };
 
-    },[category, product])
+  const filteredProducts = selectedCategory
+    ? products.filter(p => p.category.id === selectedCategory)
+    : products;
 
-     return (
-        <>
-        <NavBar/>
-        <div className='your-categories'>
-            <div className='categories-int'>{category.length > 0 && <div>{category[0].name}</div>}</div>
-            <div className='categories-int'>{category.length > 0 && <div>{category[1].name}</div>}</div>
-            <div className='categories-int'>{category.length > 0 && <div>{category[2].name}</div>}</div>
-            <div className='categories-int'>{category.length > 0 && <div>{category[3].name}</div>}</div>
-            <div className='categories-int'>{category.length > 0 && <div>{category[4].name}</div>}</div>
-            <div className='categories-int'>{category.length > 0 && <div>{category[5].name}</div>}</div>
-            <div className='categories-int'>{category.length > 0 && <div>{category[6].name}</div>}</div>
+  return (
+    <>
+      <NavBar />
+      <div className="your-categories">
+        {categories.map(c => (
+          <div
+            className="categories-int"
+            key={c.id}
+            onClick={() => handleCategoryClick(c.id)}
+          >
+            {c.name}
+          </div>
+        ))}
+      </div>
+      <div className="the-latest">
+        <div className="latest-container">
+          <p className="lastest">The latest. </p>
+          <p className="take">Take a look at what’s new, right now.</p>
         </div>
-        <div className='the-latest'>
-            <div className='latest-container'><p className='lastest'>The latest. </p><p className='take'>Take a look at what’s new, right now.</p></div>
-        </div>
-            <Container>
-            { product.length > 0 ? 
-                (<Row>
-                    {
-                        product.map(
-                            tag => {
-                                return (
-                                    <Col key={tag.id} sm="12" md="6" lg="6" xl="6" xxl="4" className='col-products'>
-                                        <CardComponent
-                                            title={tag.status}
-                                            image={productMac}
-                                            showButton={true}
-                                            productName={tag.name}
-                                            price={tag.price}   
-                                        />  
-                                    </Col>
-                                )
-                            }
-                        )
-                    }
-                </Row>)
-                : 
-                
-                (<div className='date-confirm'>LOADING PRODUCTS...</div>) 
-            }
-            </Container>
-         <Footer/>
-         </>
-     )
-}
+      </div>
+      <Container>
+        {filteredProducts.length > 0 ? (
+          <Row>
+            {filteredProducts.map(tag => {
+              return (
+                <Col
+                  key={tag.id}
+                  sm="12"
+                  md="6"
+                  lg="6"
+                  xl="6"
+                  xxl="4"
+                  className="col-products"
+                >
+                  <CardComponent
+                    title={tag.status}
+                    image={tag.image}
+                    showButton={true}
+                    productName={tag.name}
+                    price={tag.price}
+                  />
+                </Col>
+              );
+            })}
+          </Row>
+        ) : (
+          <div className="date-confirm">LOADING PRODUCTS...</div>
+        )}
+      </Container>
+      <Footer />
+    </>
+  );
+};
