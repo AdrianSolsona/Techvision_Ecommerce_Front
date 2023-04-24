@@ -27,7 +27,7 @@ export const Shop = () => {
   }, []);
 
   const handleCategoryClick = categoryId => {
-    setSelectedCategory(categoryId);
+    setTimeout(() => setSelectedCategory(categoryId), 300);
   };
 
   const filteredProducts = selectedCategory
