@@ -43,4 +43,46 @@ export const allCategories = async (body) => {
 
 }
 
+export const bringUsers = async (token) => {
+  let config = {
+    headers: { 
+      'Authorization': 'Bearer '+ token,  
+    }
+  };
+
+  return await axios.get(`${root}users/all`, config);
+}
+
+export const AllAddressUsers = async (token) => {
+  let config = {
+    headers: { 
+      'Authorization': 'Bearer '+ token,  
+    }
+  };
+
+  return await axios.get(`${root}address/all`, config);
+}
+
+export const AllOrderUsers = async (token) => {
+  let config = {
+    headers: { 
+      'Authorization': 'Bearer '+ token,  
+    }
+  };
+
+  return await axios.get(`${root}orders/all`, config);
+}
+
+export const NewAddressShip = async (body, token) => {
+  let config = {
+    headers: { 
+      'Authorization': 'Bearer '+ token,  
+    }
+  };
+
+  return await axios.post(`${root}address`, body, config);
+}
+
+
+
 
