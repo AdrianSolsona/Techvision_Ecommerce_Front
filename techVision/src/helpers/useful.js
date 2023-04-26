@@ -3,10 +3,8 @@ export const validate = (name, data, required) => {
       case "name":
       case "surname":
       case "address":
-      case "apellido":
-      case "username":
-      case "gender": 
-      case "date_of_birth": 
+      case "country":
+      case "city": 
         //Aqui evaluaremos strings que NO pueden tener números
   
         if (data === "" && required === true) {

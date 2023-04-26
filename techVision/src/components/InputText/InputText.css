@@ -37,5 +37,6 @@
         margin-left: 1.5rem;
     }
     .inputErrorDesign {
-      border: 0.2em solid red;
+      border: 0.2em solid rgba(255, 44, 44, 0.542);
+      box-shadow: 0 0 0 0.2rem rgba(255, 44, 44, 0.542);
   }
