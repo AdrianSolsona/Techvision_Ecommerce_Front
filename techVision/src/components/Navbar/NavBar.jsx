@@ -57,15 +57,25 @@ export const NavBar = () => {
                 ) :
                 datosCredencialesRedux?.credentials?.decodificado?.rolId === 1 ? (
                 <> 
-                  <div className='nav-init'>
-                      <Navigator ruta={"Inicio"} destino={"/"} />
-                      <div onClick={()=>navigate("/users")}>Usuarios</div>
-                      <div onClick={()=>navigate("/data/user")}>{datosCredencialesRedux?.credentials?.decodificado?.username}</div>
-                      <div className='factordent'>
-                    <div className='link-title'>TECHV</div>
+                   <div className='nav-init'>
+                    <div className='home-dif'><Navigator ruta={"HOME"} destino={"/"} /></div>
+                    <Navigator ruta={"SHOP"} destino={"/shop"} />
+                    <div onClick={()=>navigate("/contact")}>CONTACT</div>
+                    <div>{datosCredencialesRedux?.credentials?.decodificado?.username}</div>
                   </div>
+                  <div className='factordent'>
+                  <img className='image-prp' src={principalImage} alt="" />
+                  </div>
+                  <div className='nav-init'>
+                    <div className='nav-login'> 
+                      <Navigator ruta={"ORDERS"} destino={"/users/order"} />
+                    </div>
+                    <div><Navigator ruta={" USERS"} destino={"/users/admin"} /></div>
+                    <div className='nav-login'>
+                      <i class="bi bi-person icon-login"></i>
                       <div onClick={() => {  navigate("/login"); logoutFunction();}}>LOGOUT</div>
-                  </div>  
+                    </div>
+                  </div>
                 </>       
     
                 ) : datosCredencialesRedux?.credentials?.decodificado?.rolId === 2 ? (
@@ -77,7 +87,7 @@ export const NavBar = () => {
                     <div>{datosCredencialesRedux?.credentials?.decodificado?.username}</div>
                   </div>
                   <div className='factordent'>
-                    <div className='link-title'>TECHV</div>
+                    <img className='image-prp' src={principalImage} alt="" />
                   </div>
                   <div className='nav-init'>
                     <div className='nav-login'>
