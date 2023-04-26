@@ -34,10 +34,12 @@ export const Shop = () => {
     ? products.filter(p => p.category.id === selectedCategory)
     : products;
 
+    
   return (
     <>
-      <NavBar />
+      <NavBar />    
       <div className="your-categories">
+      <div className="all" onClick={() => window.location.reload()}>ALL</div>
         {categories.map(c => (
           <div
             className="categories-int"

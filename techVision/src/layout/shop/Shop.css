@@ -3,6 +3,9 @@
     justify-content: center;
     align-items: center;
 }
+.all-categories{
+    display: flex;
+}
 .your-categories{
     display: flex;
     justify-content: center;
