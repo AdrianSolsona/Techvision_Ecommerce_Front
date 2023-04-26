@@ -1,0 +1,27 @@
+.all-table{
+    width: 80rem;
+    font-family: 'Catamaran', sans-serif;
+    
+}
+.container-table{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.data-th{
+    font-weight: 600;
+}
+
+.td-1{
+    background-color: rgb(236, 236, 236);
+    height: 2.8rem;
+}
+.td-2{
+    background-color: white;
+    height: 2.8rem;
+}
+.data-cell{
+    
+    vertical-align: middle;
+}
