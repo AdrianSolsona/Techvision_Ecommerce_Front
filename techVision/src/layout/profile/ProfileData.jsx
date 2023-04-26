@@ -12,6 +12,9 @@ import { useNavigate } from 'react-router-dom';
 import { NavBar } from '../../components/Navbar/NavBar';
 import { Footer } from '../../components/Footer/Footer';
 import { ButtonAct } from "../../components/ButtonAct/ButtonAct";
+import { Navigator } from '../../components/Navigator/Navigator';
+import { Col, Container, Row } from 'react-bootstrap';
+import { CardAddress } from '../../components/CardAddress/CardAddress';
 
 
 
@@ -37,45 +40,7 @@ export const ProfileData = () => {
             }).catch(error => console.log(error));
         }
     }, [ReduxCredentials.credentials.token, users]);
-/*
-    useEffect(()=>{
-        if(users.length === 0){
 
-            dataUsers(ReduxCredentials.credentials.token)
-                .then(
-                    result => {
-                        //console.log(result)
-                        //Efectivamente, despues de traer los usuarios de la base de datos, los guardamos en el hook
-                        setUsers(result.data)
-                    }
-                )
-                .catch(error => console.log(error));
-        }
-
-    },[users])
-    console.log(users)
-    /*
-    
-
-    
-    
-
-    useEffect(()=>{
-        if(address.length === 0){
-
-            addressUsers(ReduxCredentials.credentials.token)
-                .then(
-                    result => {
-                        console.log(result)
-                        //Efectivamente, despues de traer los usuarios de la base de datos, los guardamos en el hook
-                        setAddress(result.data)
-                    }
-                )
-                .catch(error => console.log(error));
-        }
-
-    },[address])
-    console.log(address)*/
     const selected = (persona) => {
         
         
@@ -91,45 +56,48 @@ export const ProfileData = () => {
         <NavBar/>
         <div className='order-others'>
             <div className='order-detail'>
-                <i class="bi bi-box-seam box-icon"></i><div>Orders</div> 
+                <i class="bi bi-box-seam box-icon"></i><Navigator ruta={"Orders"} destino={"/orders"} />
             </div>
             <div className='order-detail'>
-                <i class="bi bi-truck box-icon"></i><div>New shipping address</div> 
+                <i class="bi bi-truck box-icon"></i><Navigator ruta={"New Shipping Address"} destino={"/new/shipping"} />
             </div>
             <div className='order-detail'>
             <i class="bi bi-bag box-icon"></i><div>Continue shopping</div> 
             </div>
-
             
         </div>
         <div className='all-container'>
-         <div className='usersDesign'>
-            <div className='icon-user'><i class="bi bi-person-rolodex"></i></div>
-            <div className='col-info'>
-                <div className='line-1'>Email:</div><div className='data-user'>{ users.email }</div>  
-            </div>
-            <div className='col-info'>
-                <div className='line-1'>Name:</div><div className='data-user'>{ address[0]?.name}</div>
-            </div>
-            <div className='col-info'>
-                <div className='line-1'>Surname:</div><div className='data-user'>{ address[0]?.surname}</div>
-            </div>
-            <div className='col-info'>
-                <div className='line-1'>Country:</div><div className='data-user'>{ address[0]?.country}</div>
-            </div>
-            <div className='col-info'>
-                <div className='line-1'>City:</div><div className='data-user'>{ address[0]?.city}</div>
-            </div>
-            <div className='col-info'>
-                <div className='line-1'>Address:</div><div className='data-user'>{ address[0]?.address}</div>
-            </div>
-            <div className='col-info'>
-                <div className='line-1'>Phone:</div><div className='data-user'>{ address[0]?.phone}</div>
-            </div>
-            <div className='col-info'>
-                <div className='line-1'>Postcode:</div><div className='data-user'>{ address[0]?.postcode}</div>
-            </div>
-        </div>
+        <Container>
+        {address.length > 0 ? (
+          <Row>
+            {address.map(tag => {
+              return (
+                <Col
+                  key={tag.id}
+                  sm="12"
+                  md="6"
+                  lg="6"
+                  xl="4"
+                  xxl="4"
+                  className="usersDesign"
+                >
+                <CardAddress 
+                    name={tag.name}
+                    surname={tag.surname}
+                    country={tag.country}
+                    city={tag.city}
+                    address={tag.address}
+                    phone={tag.phone}
+                    postcode={tag.postcode}
+                />
+                </Col>
+              );
+            })}
+          </Row>
+        ) : (
+          <div className="date-confirm">LOADING SHIPPING ADDRESS...</div>
+        )}
+      </Container>
         </div>
         <div className='buttons-info'>
             <div className='bnt-modify'>
