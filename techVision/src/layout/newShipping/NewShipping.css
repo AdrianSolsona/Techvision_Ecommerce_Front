@@ -1,0 +1,12 @@
+.container-inputs-ship{
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.message-error{
+    font-family: 'Catamaran', sans-serif;
+    margin-top: 0.5rem;
+    color: rgb(118, 118, 118);
+}
