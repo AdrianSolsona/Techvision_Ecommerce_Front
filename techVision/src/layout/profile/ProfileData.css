@@ -4,24 +4,27 @@
     font-family: 'Catamaran', sans-serif;
     font-weight: 600;
     color: rgb(118, 118, 118);
-    margin-top: 3rem;
+    margin-top: 5rem;
     margin-left: 7rem;
     cursor: pointer;
     flex-direction: column;
+    margin-bottom: 5rem;
 }
 .order-detail{
     display: flex;
     gap: 0.5rem;
 }
 .box-icon{
-    font-size: 1.3rem;  
+    font-size: 1.3rem;
 }
 
 .all-container{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
 }
+
 .icon-user{
     font-size: 2.8rem;
     margin-bottom: 2rem;
@@ -75,4 +78,20 @@
 }
 .btn-modify{
     margin-bottom: 2rem;
+}
+.button-modify-add{
+    margin-top: 1rem;
+}
+.all-delete{
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+@media(max-width: 472px){
+    .usersDesign{
+        width: 19rem;
+        
+    }
+    
 }

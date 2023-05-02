@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import './profileData.css';
-import { dataUsers } from '../../services/apiCalls';
+import { dataUsers, deleteMyAddress } from '../../services/apiCalls';
 import { addressUsers } from '../../services/apiCalls';
 import { useSelector } from "react-redux";
 import { userData } from "../userSlice";
 import { addChoosen } from '../detailSlice';
-import { userAddress } from "../addressSlice";
+import { addressDataAll } from "../addressSlice";
 import { addChoosenAddress } from '../addressSlice';
 import { useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
@@ -19,12 +19,19 @@ import { CardAddress } from '../../components/CardAddress/CardAddress';
 
 
 
+
 export const ProfileData = () => {
 
     const [users, setUsers] = useState([]);
     const [address, setAddress] = useState([]);
+    
 
     const ReduxCredentials = useSelector(userData);
+    console.log(ReduxCredentials)
+    
+    const addressSelectedRdx = useSelector(addressDataAll)
+    console.log(addressSelectedRdx)
+   
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -41,6 +48,18 @@ export const ProfileData = () => {
         }
     }, [ReduxCredentials.credentials.token, users]);
 
+    const addressSelected = (address) => {
+        dispatch(addChoosenAddress({ choosenAddress: address }))
+        console.log(addChoosenAddress({ choosenAddress: address }))
+        setTimeout(() => {
+          navigate('/modify/address');
+        }, 1000)
+      }
+      const deleteAddress =  async (address) =>{
+        await deleteMyAddress(  address.id,ReduxCredentials.credentials.token)
+        setAddress(prevAddress => prevAddress.filter(a => a.id !== address.id));
+    }
+
     const selected = (persona) => {
         
         
@@ -50,7 +69,7 @@ export const ProfileData = () => {
             navigate("/modify/user");
         },500)
     }
-    
+    console.log(address.map)
      return (
         <>
         <NavBar/>
@@ -62,22 +81,21 @@ export const ProfileData = () => {
                 <i class="bi bi-truck box-icon"></i><Navigator ruta={"New Shipping Address"} destino={"/new/shipping"} />
             </div>
             <div className='order-detail'>
-            <i class="bi bi-bag box-icon"></i><div>Continue shopping</div> 
+            <i class="bi bi-bag box-icon"></i><Navigator ruta={"Continue shopping"} destino={"/shop"} />
             </div>
-            
         </div>
-        <div className='all-container'>
-        <Container>
+        <div>
+        <Container >
         {address.length > 0 ? (
-          <Row>
+          <Row className='all-container'>
             {address.map(tag => {
               return (
-                <Col
+                <Col 
                   key={tag.id}
                   sm="12"
-                  md="6"
-                  lg="6"
-                  xl="4"
+                  md="12"
+                  lg="12"
+                  xl="6"
                   xxl="4"
                   className="usersDesign"
                 >
@@ -90,6 +108,23 @@ export const ProfileData = () => {
                     phone={tag.phone}
                     postcode={tag.postcode}
                 />
+                <div className='button-modify-add'>
+                <ButtonAct
+                        className={"loginSendDeac"}
+                        buttonName="MODIFY PRINCIPAL ADDRESS"
+                        onClick={() => { 
+                            addressSelected(tag.id);
+                        }}
+                    />   
+                </div>
+                <div className='all-delete'>
+                    <div
+                    onClick = {() => deleteAddress(tag)}
+                    className= "deleteDesign"
+                  >
+                    DELETE
+                    </div>
+                </div>
                 </Col>
               );
             })}
@@ -100,24 +135,7 @@ export const ProfileData = () => {
       </Container>
         </div>
         <div className='buttons-info'>
-            <div className='bnt-modify'>
-                <ButtonAct
-                        className={"loginSendDeac"}
-                        buttonName="MODIFY EMAIL"
-                        onClick={() => { 
-                            selected();
-                        }}
-                    />
-            </div>
-            <div>
-                <ButtonAct
-                        className={"loginSendDeac"}
-                        buttonName="MODIFY SHIPPING ADDRESS"
-                        onClick={() => { 
-                            selected();
-                        }}
-                    />   
-            </div>   
+               
             </div>
          <Footer/>
          </>
