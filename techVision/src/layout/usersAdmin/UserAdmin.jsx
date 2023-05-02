@@ -6,6 +6,7 @@ import { bringUsers } from '../../services/apiCalls';
 import { NavBar } from '../../components/Navbar/NavBar';
 import { Footer } from '../../components/Footer/Footer';
 import Table from 'react-bootstrap/Table';
+import { CardAdmin } from '../../components/CardAdmin/CardAdmin';
 
 
 export const UserAdmin = () =>  {
@@ -62,6 +63,22 @@ export const UserAdmin = () =>  {
                 </tbody>
             </Table>
             </div>
+            <div className='card-alternative'>
+                {users.map((user) => (
+                <CardAdmin key={user.id}
+                        id={user.id}
+                        email={user.email}
+                        name={user.Addresses[0]?.name}
+                        surname={user.Addresses[0]?.surname}
+                        country={user.Addresses[0]?.country}
+                        city={user.Addresses[0]?.city}
+                        address={user.Addresses[0]?.address}
+                        phone={user.Addresses[0]?.phone}
+                        postcode={user.Addresses[0]?.postcode}
+                        />
+                ))}
+            </div>
+            
             <Footer/>
         </>
     );

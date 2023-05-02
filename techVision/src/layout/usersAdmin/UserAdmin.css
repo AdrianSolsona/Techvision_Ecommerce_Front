@@ -25,3 +25,19 @@
     
     vertical-align: middle;
 }
+.card-alternative{
+    display: none;
+    
+}
+@media(max-width: 772px){
+    .card-alternative{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+    .all-table{
+        display: none;
+    }
+}
