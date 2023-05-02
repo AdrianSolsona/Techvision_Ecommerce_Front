@@ -63,3 +63,30 @@
     align-items: center;
 }
 
+@media(max-width: 472px){
+    .loginSendDeac {
+
+        color: #fff;
+        background-color: black;
+        border-color: black;
+        font-family: 'Catamaran', sans-serif;
+        border-radius: 0.1rem; /* Agrega un borde redondeado */
+        padding: 0.5rem 1rem; /* Agrega un padding a los lados */
+        font-size: 0.82rem; /* Tamaño de fuente */
+        margin-top: 1rem;
+        line-height: 1.5; /* Altura de línea */
+        text-align: center; /* Alineación de texto */
+        text-decoration: none; /* Elimina la subraya del enlace si se aplica */
+        cursor: pointer; /* Cambia el cursor al pasar el mouse sobre el botón */
+        transition: all 0.15s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15rem;
+        height: 3.8rem;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        
+    }
+}
+

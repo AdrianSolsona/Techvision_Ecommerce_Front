@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 8rem;
 }
 .container-icon{
     font-size: 3.5rem;
@@ -26,4 +27,8 @@
     font-size: 2rem;
     margin-top: 15rem;
     margin-bottom: 15rem;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
 }
