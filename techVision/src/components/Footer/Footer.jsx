@@ -7,7 +7,7 @@ import { Col, Container, Row } from 'react-bootstrap';
         <div className='all-footer'>
             <Container className='container-prp-footer'>
                 <Row className='flex-row d-flex '>
-                <Col className='col-footer-int'xs={12} md={12} lg={12} xl={9} xxl={3}>
+                <Col className='col-footer-int'xs={12} md={12} lg={6} xl={6} xxl={3}>
                             <div>
                                 <p className='footer-title'>CUSTOMER SERVICE</p>
                                 <p className='footer-other'>Help & Contact Us</p>
@@ -16,7 +16,7 @@ import { Col, Container, Row } from 'react-bootstrap';
                                 <p className='footer-other'>Terms & Conditions</p>
                             </div>
                     </Col>
-                    <Col className='col-footer-int'xs={12} md={12} lg={12} xl={9} xxl={3}>
+                    <Col className='col-footer-int'xs={12} md={12} lg={6} xl={6} xxl={3}>
                             <div>
                                 <p className='footer-title'>COMPANY</p>
                                 <p className='footer-other'>What We Do</p>
@@ -25,7 +25,7 @@ import { Col, Container, Row } from 'react-bootstrap';
                                 <p className='footer-other'>FAQs</p>
                             </div>
                     </Col>
-                    <Col className='col-footer-int'xs={12} md={12} lg={12} xl={9} xxl={3}>
+                    <Col className='col-footer-int'xs={12} md={12} lg={6} xl={6} xxl={3}>
                             <div>
                                 <p className='footer-title'>SOCIAL MEDIA</p>
                                 <p className='footer-other'>Twitter</p>
@@ -35,7 +35,7 @@ import { Col, Container, Row } from 'react-bootstrap';
                                 
                             </div>
                     </Col>
-                    <Col className='col-footer-int'xs={12} md={12} lg={12} xl={9} xxl={3}>
+                    <Col className='col-footer-int'xs={12} md={12} lg={6} xl={6} xxl={3}>
                             <div>
                                 <p className='footer-title'>PROFILE</p>
                                 <p className='footer-other'>My account</p>
