@@ -10,3 +10,12 @@
     margin-top: 0.5rem;
     color: rgb(118, 118, 118);
 }
+.container-icon{
+    margin-top: 0;
+}
+.icon-login-1{
+    font-size: 3rem;
+}
+.container-btn{
+    margin-top: 1rem;
+}

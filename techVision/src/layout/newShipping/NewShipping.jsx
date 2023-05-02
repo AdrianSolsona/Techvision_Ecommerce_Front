@@ -9,6 +9,7 @@ import { Footer } from '../../components/Footer/Footer';
 import { Col, Container, Row } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
 import Moment from 'moment';
+import { Navigator } from '../../components/Navigator/Navigator';
 import { useNavigate } from 'react-router-dom';
 import { NewAddressShip } from '../../services/apiCalls';
 
@@ -126,8 +127,19 @@ export const NewShipping = () =>  {
   return (
     <>
       <NavBar/>
+      <div className='order-others'>
+            <div className='order-detail'>
+                <i class="bi bi-box-seam box-icon"></i><Navigator ruta={"Orders"} destino={"/orders"} />
+            </div>
+            <div className='order-detail'>
+            <i class="bi bi-person box-icon"></i><Navigator ruta={"Profile"} destino={"/profile"} />
+            </div>
+            <div className='order-detail'>
+            <i class="bi bi-bag box-icon"></i><Navigator ruta={"Continue shopping"} destino={"/shop"} />
+            </div>
+        </div>
       <div className='container-icon'>
-        <i className="bi bi-person-workspace icon-login"></i>
+        <i className="bi bi-person-workspace icon-login-1"></i>
       </div>
       {welcome !== "" ? (
             <div className="date-confirm">{welcome}</div>
