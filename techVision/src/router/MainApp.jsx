@@ -9,6 +9,8 @@ import { UserAdmin } from '../layout/usersAdmin/UserAdmin'
 import { OrderUsers } from '../layout/orders/Orders'
 import { OrderUser } from '../layout/orderUser/OrderUser'
 import { NewShipping } from '../layout/newShipping/NewShipping'
+import { ModifyAddress } from '../layout/modifyAddress/ModifyAddress'
+import { ProductDetail } from '../layout/productDetail/ProductDetail'
 
 
 export const MainApp = () => {
@@ -24,6 +26,8 @@ export const MainApp = () => {
         <Route path='/users/order' element={<OrderUsers/>}/>
         <Route path='/orders' element={<OrderUser/>}/>
         <Route path='/new/shipping' element={<NewShipping/>}/>
+        <Route path='/modify/address' element={<ModifyAddress/>}/>
+        <Route path='/product' element={<ProductDetail/>}/>
     </Routes>
     </>
   )

@@ -83,6 +83,26 @@ export const NewAddressShip = async (body, token) => {
   return await axios.post(`${root}address`, body, config);
 }
 
+export const updateAddress = async (id, body, token) => {
+  let config = {
+    headers: { 
+      'Authorization': 'Bearer '+ token,  
+    }
+  };
+
+  return await axios.put(`${root}address/${id}`, body, config);
+}
+
+export const deleteMyAddress = async (id, token) => {
+  let config = {
+    headers: { 
+      'Authorization': 'Bearer '+ token,  
+    }
+  };
+
+  return await axios.delete(`${root}address/${id}`, config);
+}
+
 
 
 
