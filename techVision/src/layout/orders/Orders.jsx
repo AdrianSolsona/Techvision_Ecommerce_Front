@@ -7,6 +7,7 @@ import { Footer } from '../../components/Footer/Footer';
 import Table from 'react-bootstrap/Table';
 import { AllOrderUsers } from '../../services/apiCalls';
 import Moment from 'moment';
+import { CardOrder } from '../../components/CardOrder/CardOrder';
 
 export const OrderUsers = () =>  {
 
@@ -55,6 +56,18 @@ export const OrderUsers = () =>  {
                 ))}
                 </tbody>
             </Table>
+            </div>
+            <div className='card-alternative'>
+                {orders.map((order) => (
+                <CardOrder key={order.id}
+                        id={order.id}
+                        userId={order?.user_id}
+                        date={Moment (order?.date).format('DD/MM/YYYY HH:mm:ss')}
+                        status={order?.status}
+                        quantity={order?.total}
+                        email={order?.User.email}
+                        />
+                ))}
             </div>
             <Footer/>
         </>
