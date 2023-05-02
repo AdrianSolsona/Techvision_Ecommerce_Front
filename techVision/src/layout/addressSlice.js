@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const addressSlice = createSlice({
     name: 'address',
     initialState: {
-      ChoosenAddress: {}
+      choosenAddress : {}
     },
     reducers: {
       addChoosenAddress: (state, action) => {
@@ -20,6 +20,6 @@ export const addressSlice = createSlice({
 //exporto las ACCIONES.....
 export const { addChoosenAddress } = addressSlice.actions;
 
-export const userAddress = (state) => state.address;
+export const addressDataAll = (state) => state.address;
 
 export default addressSlice.reducer;

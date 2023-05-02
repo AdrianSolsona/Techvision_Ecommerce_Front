@@ -21,4 +21,5 @@ export const { addChoosen } = detailSlice.actions;
 
 export const detailData = (state) => state.detail;
 
+
 export default detailSlice.reducer;
