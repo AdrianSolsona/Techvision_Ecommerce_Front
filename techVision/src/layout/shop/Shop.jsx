@@ -6,15 +6,19 @@ import { NavBar } from '../../components/Navbar/NavBar';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Footer } from '../../components/Footer/Footer';
 import { allCategories, allProducts } from '../../services/apiCalls';
+import { Navigator } from '../../components/Navigator/Navigator';
+import { addChoosen } from '../detailSlice';
 import productMac from '../../assets/mac-prp-1.png';
 import './shop.css';
 import CardComponent from '../../components/Card/Card';
+import { Link } from 'react-router-dom';
 
 export const Shop = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
 
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -33,7 +37,16 @@ export const Shop = () => {
   const filteredProducts = selectedCategory
     ? products.filter(p => p.category.id === selectedCategory)
     : products;
+    console.log(filteredProducts)
 
+    const selected = (tag) => {
+        
+      dispatch(addChoosen({ choosenObject: tag }))
+      
+      setTimeout(()=>{
+          navigate(`/product`);
+      },500)
+  }
     
   return (
     <>
@@ -76,8 +89,11 @@ export const Shop = () => {
                     showButton={true}
                     productName={tag.name}
                     price={tag.price}
+                    
                   />
+                  <div onClick={() => selected(tag)}>detalle</div>
                 </Col>
+                
               );
             })}
           </Row>

@@ -19,6 +19,7 @@
     margin-bottom: 6rem;
     letter-spacing: 0.1rem;
     cursor: pointer;
+    width: 100%;
 }
 .categories-int:hover{
     color: black;
@@ -27,12 +28,12 @@
 }
 .the-latest{
     display: flex;
-    position: relative;
-    left: 20.6%;
+    justify-content: center;
     font-weight: 600;
     font-size: 2rem;
     font-family: 'Catamaran', sans-serif;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    margin-right: 34rem;
 }
 .latest-container{
     display: flex;
@@ -43,6 +44,8 @@
 }
 .col-products{
     margin-bottom: 10rem;
+    display: flex;
+    justify-content: center;
 }
 .cont-treatment-1{
     display: flex;
@@ -66,4 +69,43 @@
 }
 .img-movil-shop{
     width: 10rem;
+}
+
+@media(max-width: 1400px){
+    .the-latest{
+        margin-right: 14.5rem;
+    }
+}
+
+@media(max-width: 1200px){
+    .your-categories{
+        gap: 2.8rem;
+    }
+}
+@media(max-width: 1000px){
+    .your-categories{
+        gap: 2.4rem;
+    }
+}
+@media(max-width: 854px){
+    .your-categories{
+        display: flex;
+        flex-direction: column;
+        margin-top: 7rem;
+    }
+    .the-latest{
+        margin-right: 1.3rem;
+    }
+}
+@media(max-width: 658px){
+    .the-latest{
+        margin-right: 0rem;
+        font-size: 1.5rem;
+    }
+}
+@media(max-width: 480px){
+    .the-latest{
+        
+        font-size: 1.07rem;
+    }
 }
