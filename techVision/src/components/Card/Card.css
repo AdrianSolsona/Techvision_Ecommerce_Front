@@ -38,7 +38,7 @@
     font-family: 'Catamaran', sans-serif;
     display: flex;
     position: relative;
-    top: 23%;
+    top: 31%;
     left: 9%;
     letter-spacing: 0.1rem;
     margin-bottom: 5rem;
@@ -62,7 +62,7 @@
     border-color: white;
     width: 7.5rem;
     border-radius: 0;
-    margin-top: 5.3rem;
+    margin-top: 7.2rem;
     opacity: 0;
     transition: all 1s ease-in-out;
     letter-spacing: 0.1rem;
@@ -80,7 +80,7 @@
     font-family: 'Catamaran', sans-serif;
     letter-spacing: 0.1rem;
     font-size: 1.1rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 .title-product-sh-2{
     display: flex;
@@ -91,17 +91,4 @@
     font-size: 1.1rem;
 }
 
-@media(max-width:450px){
-    .cont-treatment-1{
-        width: 18rem;
-    }
-    .title-treatment-1{
-        font-size: 1.2rem;
-        
-        width: 14rem;
-    }
-    .text-treatment-1{
-        width: 15rem;
-        font-size: 0.85rem;
-    }
-}
+
