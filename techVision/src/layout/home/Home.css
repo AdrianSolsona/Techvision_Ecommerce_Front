@@ -2,6 +2,11 @@
     display: flex;
     justify-content: center;
 }
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .visual-product{
     height: 40rem;
     background-color: #f5f5f5;
@@ -35,50 +40,55 @@
     color: rgb(0, 0, 0);
     font-weight: 700;
     font-size: 2.2rem;
+    text-align: center;
 }
 .offers{
     color: rgb(110, 110, 110);
     font-size: 1.2rem;
     font-weight: 400;
 }
-.all-categories{
-    display: flex;
-    gap: 10rem;
-    margin-top: 6rem;
-    letter-spacing: 0.1rem;
-}
-
-.categories-home{
-    background-color: white;
-    width: 100%;
+.the-best{
+    margin-bottom: 3rem;
+    margin-top: 10rem;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 6rem;
-    gap: 3rem;
-    color: rgb(118, 118, 118);
-    font-weight: 700;
-    font-size: 0.8rem;
+    font-weight: 600;
+    font-size: 2rem;
     font-family: 'Catamaran', sans-serif;
+    margin-bottom: 1.5rem;
+    margin-right: 34rem;
+
 }
+.best-container{
+    display: flex;
+    gap: 0.1rem;
+}
+.best-2{
+    color: rgb(118, 118, 118);;
+}
+.also{
+margin-left: 0.5rem;
+}
+
 .card-container{
-    margin-bottom: 2rem;
+    margin-bottom: 10rem;
+
 }
 .all{
     color: black;
 }
-.filter{
-    margin-left: 32rem;
-    color: black;
-    position: relative;
-    left: 5%;
-}
+
 .container-products{
-    width: 150rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .product-home{
-    margin-bottom: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 
 @keyframes animation-div {
@@ -98,5 +108,223 @@
       left: 0;
     }
   }
+
+  @media(max-width: 1700px){
+    .img-movil-prp{
+        width: 22rem;
+        height: 22rem;
+    }
+    .img-movil-prp-2{
+        width: 22rem;
+        height: 22rem;
+    }
+    .img-product{
+        left: 5%;
+    }
+}
+  
+    @media(max-width: 1400px){
+        .img-movil-prp{
+            width: 18rem;
+            height: 18rem;
+        }
+        .img-movil-prp-2{
+            width: 18rem;
+            height: 18rem;
+        }
+        .img-product{
+            left: 4%;
+        }
+        .the-best{
+            margin-right: 24rem;
+        }
+        .best{
+            color: rgb(0, 0, 0);
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        .offers{
+            color: rgb(110, 110, 110);
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
+    @media(max-width: 1200px){
+        .img-movil-prp{
+            width: 18rem;
+            height: 18rem;
+        }
+        .img-movil-prp-2{
+            width: 18rem;
+            height: 18rem;
+        }
+        .img-product{
+            left: 4%;
+        }
+        .the-best{
+            margin-right: 12.5rem;
+        }
+        .best{
+            color: rgb(0, 0, 0);
+            font-weight: 700;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        .offers{
+            color: rgb(110, 110, 110);
+            font-size: 1rem;
+            font-weight: 400;
+            text-align: center;
+        }
+        .text-product{
+            position: relative;
+            top: 20%;
+            right: 0%;
+            left: 0%;
+        }
+        .img-product{
+            margin-top: 15rem;
+        }
+        .visual-product{
+            height: 40rem;
+            background-color: #f5f5f5;
+            width: 85%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.2rem;
+        }
+    }
+    @media(max-width: 1000px){
+        .the-best{
+            margin-right: 0rem;
+    }
+    }
+    @media(max-width: 772px){
+        .the-best{
+            margin-top: 6rem;
+            font-size: 1.5rem;
+    }
+    }
+    
+    @media(max-width: 687px){
+        .img-movil-prp{
+            width: 14rem;
+            height: 14rem;
+        }
+        .img-movil-prp-2{
+            width: 14rem;
+            height: 14rem;
+        }
+        .text-product{
+            position: relative;
+            top: 23%;
+            right: 0%;
+            left: 0%;
+        }
+    }
+    @media(max-width: 546px){
+        .img-movil-prp{
+            width: 10rem;
+            height: 10rem;
+        }
+        .img-movil-prp-2{
+            width: 10rem;
+            height: 10rem;
+        }
+        .text-product{
+            position: relative;
+            top: 23%;
+            right: 0%;
+            left: 0%;
+        }
+        .the-best{
+            margin-top: 6rem;
+            font-size: 1.05rem;
+        }
+        .visual-product{
+            height: 35rem;
+            background-color: #f5f5f5;
+            width: 85%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.2rem;
+        }
+        .text-product{
+            display: flex;
+            text-align: center;
+            width: 18rem;
+        }
+        .best{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: -30%;
+            font-size: 1.4rem;
+        }
+        .offers{
+            position: relative;
+            top: -15%;
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            
+        }
+        @media(max-width: 400px){
+            .img-movil-prp{
+                width: 8.5rem;
+                height: 8.5rem;
+            }
+            .img-movil-prp-2{
+                width: 8.5rem;
+                height: 8.5rem;
+            }
+            .text-product{
+                position: relative;
+                top: 23%;
+                right: 0%;
+                left: 0%;
+            }
+            .the-best{
+                margin-top: 6rem;
+                font-size: 0.95rem;
+                margin-left: 0.5;
+                margin-right: 0;
+            }
+            .visual-product{
+                height: 35rem;
+                background-color: #f5f5f5;
+                width: 85%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0.2rem;
+            }
+            .text-product{
+                display: flex;
+                text-align: center;
+                width: 16rem;
+            }
+            .best{
+                display: flex;
+                justify-content: center;
+                position: relative;
+                top: -30%;
+                font-size: 1.2rem;
+            }
+            .offers{
+                position: relative;
+                top: -15%;
+                margin-bottom: 0;
+                font-size: 0.8rem;
+                
+            }
+        
+    }
+
+    
+}
+
 
 

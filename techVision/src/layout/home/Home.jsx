@@ -21,34 +21,29 @@ export const Home = () => {
                     <p className='offers'>Techv offers you the best prices and conditions as well as an extensive catalog in our store.</p>
                 </div>
                 <div className='img-product'>
-                    <img src={productMac} alt="" />
+                    <img className='img-movil-prp-2' src={productMac} alt="" />
                     <img className='img-movil-prp' src={productPrincipal} alt="" />
                 </div>
             </div>
         </div>
-        <div className='all-categories'>
-            <div className='categories-home'>
-                <div className='all'>ALL</div>
-                <div>PHONE</div>
-                <div>COMPUTER</div>
-                <div>WATCH</div>
-                <div>HEADPHONES</div>
-                <div>ACCESORIES</div>
-                <div className='div-filter'>
-                    <div className='filter'>FILTER</div>
-                </div>
+        <div className="the-best">
+            <div className="best-container">
+                <p className="best-2">The best products, </p>
+                <p className="also">also at the best prices in our store.</p>
             </div>
         </div>
         <Container className='container-products'>
             <Row className='flex-row d-flex product-home '>
-                <Col md={6} lg={6} xl={4} xxl={3} className="card-container">
+                <Col xs={12} md={6} lg={6} xl={4} xxl={3} className="card-container">
                 <CardComponent
                     image={productMac}
                     showButton={true} 
                     title= "NEW"
+                    productName="IPHONE PRO MAX"
+                    price="1100"
                 />                  
                 </Col>
-                <Col md={6} lg={6} xl={4} xxl={3} className="card-container">
+                <Col xs={12} md={6} lg={6} xl={4} xxl={3} className="card-container">
                 <CardComponent
                     image={productMac}
                     showButton={true} 
@@ -57,48 +52,132 @@ export const Home = () => {
                     price="1100"
                 /> 
                 </Col>
-                <Col md={6} lg={6} xl={4} xxl={3} className="card-container">
+                <Col xs={12} md={6} lg={6} xl={4} xxl={3} className="card-container">
                 <CardComponent
                     image={productMac}
                     showButton={true} 
                     title= "NEW"
+                    productName="IPHONE PRO MAX"
+                    price="1100"
                 /> 
                 </Col>
-                <Col md={6} lg={6} xl={4} xxl={3} className="card-container">
+                <Col xs={12} md={6} lg={6} xl={4} xxl={3} className="card-container">
                 <CardComponent
                     image={productMac}
                     showButton={true} 
                     title= "NEW"
+                    productName="IPHONE PRO MAX"
+                    price="1100"
                 /> 
                 </Col>
-            </Row>
-            <Row>
-                <Col md={6} lg={6} xl={4} xxl={3} className="card-container card-final">
+            
+                <Col xs={12} md={6} lg={6} xl={4} xxl={3} className="card-container card-final">
                 <CardComponent
                     image={productMac}
                     showButton={true} 
                     title= "NEW"
+                    productName="IPHONE PRO MAX"
+                    price="1100"
                 /> 
                 </Col>
-                <Col md={6} lg={6} xl={4} xxl={3} className="card-container">
+                <Col xs={12} md={6} lg={6} xl={4} xxl={3} className="card-container">
                 <CardComponent
                     image={productMac}
                     showButton={true} 
                     title= "NEW"
+                    productName="IPHONE PRO MAX"
+                    price="1100"
                 /> 
                 </Col>
-                <Col md={6} lg={6} xl={4} xxl={3} className="card-container">
+                <Col xs={12} md={6} lg={6} xl={4} xxl={3} className="card-container">
                 <CardComponent
                     image={productMac}
                     showButton={true} 
                     title= "NEW"
+                    productName="IPHONE PRO MAX"
+                    price="1100"
                 /> 
                 </Col>
-                <Col md={6} lg={6} xl={4} xxl={3} className="card-container">
+                <Col xs={12} md={6} lg={6} xl={4} xxl={3} className="card-container">
                 <CardComponent
                     image={productMac}
                     showButton={true} 
                     title= "NEW"
+                    productName="IPHONE PRO MAX"
+                    price="1100"
+                /> 
+                </Col>
+                <Col xs={12} md={6} lg={6} xl={4} xxl={3} className="card-container card-final">
+                <CardComponent
+                    image={productMac}
+                    showButton={true} 
+                    title= "NEW"
+                    productName="IPHONE PRO MAX"
+                    price="1100"
+                /> 
+                </Col>
+                <Col xs={12} md={6} lg={6} xl={4} xxl={3} className="card-container">
+                <CardComponent
+                    image={productMac}
+                    showButton={true} 
+                    title= "NEW"
+                    productName="IPHONE PRO MAX"
+                    price="1100"
+                /> 
+                </Col>
+                <Col xs={12} md={6} lg={6} xl={4} xxl={3} className="card-container">
+                <CardComponent
+                    image={productMac}
+                    showButton={true} 
+                    title= "NEW"
+                    productName="IPHONE PRO MAX"
+                    price="1100"
+                /> 
+                </Col>
+                <Col xs={12} md={6} lg={6} xl={4} xxl={3} className="card-container">
+                <CardComponent
+                    image={productMac}
+                    showButton={true} 
+                    title= "NEW"
+                    productName="IPHONE PRO MAX"
+                    price="1100"
+                /> 
+                </Col>
+            
+                <Col xs={12} md={6} lg={6} xl={4} xxl={3} className="card-container card-final">
+                <CardComponent
+                    image={productMac}
+                    showButton={true} 
+                    title= "NEW"
+                    productName="IPHONE PRO MAX"
+                    price="1100"
+                /> 
+                </Col>
+                <Col xs={12} md={6} lg={6} xl={4} xxl={3} className="card-container">
+                <CardComponent
+                    image={productMac}
+                    showButton={true} 
+                    title= "NEW"
+                    productName="IPHONE PRO MAX"
+                    price="1100"
+                /> 
+                </Col>
+                <Col xs={12} md={6} lg={6} xl={4} xxl={3} className="card-container">
+                <CardComponent
+                    image={productMac}
+                    showButton={true} 
+                    title= "NEW"
+                    productName="IPHONE PRO MAX"
+                    price="1100"
+                /> 
+                </Col>
+                <Col xs={12} md={6} lg={6} xl={4} xxl={3} className="card-container">
+                <CardComponent
+                    image={productMac}
+                    showButton={true} 
+                    title= "NEW"
+                    productName="IPHONE PRO MAX"
+                    price="1100"
                 /> 
                 </Col>
             </Row>
