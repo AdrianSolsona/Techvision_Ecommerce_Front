@@ -47,7 +47,7 @@ export const NavBar = () => {
                   <div className='nav-init-2'>
                     <div className='nav-login'>
                       <i class="bi bi-cart2 cart-buy"></i> 
-                      <Navigator ruta={"CART"} destino={"/register"} />
+                      <Navigator ruta={"CART"} destino={"/login"} />
                     </div>
                     <div className='nav-login'>
                       <i class="bi bi-person icon-login"></i>
@@ -60,13 +60,12 @@ export const NavBar = () => {
                       <div onClick={()=>navigate("/contact")}>CONTACT</div>
                       <div>{datosCredencialesRedux?.credentials?.decodificado?.username}</div>
                     <div className='nav-login'>
-                      <Navigator ruta={"ORDERS"} destino={"/users/order"} />
+                      
                     </div>
                     <div className='nav-login'>
                       <i class="bi bi-person icon-login"></i>
                       <div onClick={() => {  navigate("/login"); logoutFunction();}}>LOGOUT</div>
                     </div>
-                    <div><Navigator ruta={" USERS"} destino={"/users/admin"} /></div>
                   </DropdownButton>
                 </>  
                 ) :
@@ -121,7 +120,7 @@ export const NavBar = () => {
                   <div className='nav-init-2'>
                     <div className='nav-login'>
                       <i class="bi bi-cart2 cart-buy"></i> 
-                      <Navigator ruta={"CART"} destino={"/register"} />
+                      <Navigator ruta={"CART"} destino={"/cart"} />
                     </div>
                     <div className='nav-login'>
                       <i class="bi bi-person icon-login"></i>
@@ -136,7 +135,7 @@ export const NavBar = () => {
                       <div>{datosCredencialesRedux?.credentials?.decodificado?.username}</div>
                     <div className='nav-login'>
                       <i class="bi bi-cart cart-buy"></i> 
-                      <Navigator ruta={"CART"} destino={"/register"} />
+                      <Navigator ruta={"CART"} destino={"/cart"} />
                     </div>
                     <div className='nav-login'>
                       <i class="bi bi-person icon-login"></i>
