@@ -9,12 +9,32 @@ import { useDispatch } from 'react-redux';
 import { detailData } from '../detailSlice';
 import productMac from '../../assets/mac-prp-1.png';
 import Button from 'react-bootstrap/Button';
+import { ProductBuy } from '../../services/apiCalls';
+import { Navigator } from '../../components/Navigator/Navigator';
+import { useNavigate } from 'react-router-dom';
+import { userData } from '../userSlice';
 
 
 export const ProductDetail = () =>  {
-    console.log(detailData)
+    
+    const credentialsRdx = useSelector(userData);
     const dataProducts = useSelector(detailData);
-    console.log(dataProducts.choosenObject)
+    const navigate = useNavigate();
+
+    const [infoBuy, setBuy] = useState({
+        user_id: credentialsRdx.credentials.decodificado.userId,
+        product_id: dataProducts.choosenObject.id,
+    
+      });
+
+    const addBuy = () => {
+    
+        ProductBuy(infoBuy,credentialsRdx.credentials.token);
+        setTimeout(()=>{
+          
+          navigate("/cart");
+      },1000)
+      };
     
 
     return(
@@ -23,17 +43,21 @@ export const ProductDetail = () =>  {
             <div className='all-detail-pro'>
             <img className='img-detail-2' src={productMac} alt="" />
                 <div className='detail-container'>
-                    <div className='title-detail'>Macbook 14 Pro</div>
-                    <div className='description-detail'>Supercharged by M2 Pro or M2 Max, MacBook Pro takes its power and efficiency further than ever. It delivers exceptional performance whether it’s plugged in or not, and now has even longer battery life. Combined with a stunning Liquid Retina XDR display and all the ports you need — this is a pro laptop without equal.</div>
+                    <div className='title-detail'>{dataProducts.choosenObject.name}</div>
+                    <div className='description-detail'>{dataProducts.choosenObject.description}</div>
                     <div className='all-btn-detail'>
-                        <Button variant="primary" size="lg" className='btn-detail'>
+                        <Button onClick={
+                  () => { 
+                    addBuy();
+              }
+                } variant="primary" size="lg" className='btn-detail'>
                             <div className='buy-detail-logo'><i class="bi bi-cart2 cart-buy-det"></i><div>Add to cart</div></div>
                         </Button>{' '}
                         <div className='container-status'><div className='arrival'>New Arrival</div></div>
                     </div>
-                    <div className='price-detail'>PRICE: 1100$</div>
+                    <div className='price-detail'>${dataProducts.choosenObject.price}</div>
                 </div>
-                <img className='img-detail' src={productMac} alt="" />
+                <img className='img-detail' src={dataProducts.choosenObject.image} alt="" />
             </div>
         <Footer/>
         </>
