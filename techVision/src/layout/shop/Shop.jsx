@@ -83,15 +83,15 @@ export const Shop = () => {
                   xxl="4"
                   className="col-products"
                 >
+                  <div className='selected-btn' onClick={() => selected(tag)}>
                   <CardComponent
                     title={tag.status}
                     image={tag.image}
                     showButton={true}
                     productName={tag.name}
-                    price={tag.price}
-                    
+                    price={tag.price}   
                   />
-                  <div onClick={() => selected(tag)}>detalle</div>
+                  </div> 
                 </Col>
                 
               );

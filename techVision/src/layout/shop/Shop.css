@@ -70,6 +70,9 @@
 .img-movil-shop{
     width: 10rem;
 }
+.selected-btn{
+    cursor: pointer;
+}
 
 @media(max-width: 1400px){
     .the-latest{
