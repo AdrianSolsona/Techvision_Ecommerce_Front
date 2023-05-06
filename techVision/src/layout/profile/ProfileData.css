@@ -88,6 +88,12 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+.new-address{
+    margin-left: 0.5rem;
+    color: rgb(118, 118, 118);
+    text-decoration: underline;
+    cursor: pointer;
+}
 @media(max-width: 472px){
     .usersDesign{
         width: 19rem;

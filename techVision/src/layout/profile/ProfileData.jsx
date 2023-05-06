@@ -130,7 +130,9 @@ export const ProfileData = () => {
             })}
           </Row>
         ) : (
-          <div className="date-confirm">LOADING SHIPPING ADDRESS...</div>
+          <div>
+            <div className="date-confirm">Complete your shipping address information<div className='new-address'><Navigator ruta={"here"} destino={"/new/shipping"}></Navigator></div></div>
+          </div>
         )}
       </Container>
         </div>
