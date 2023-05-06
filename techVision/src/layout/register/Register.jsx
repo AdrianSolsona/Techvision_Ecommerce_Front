@@ -190,7 +190,7 @@ export const Register = () => {
                         buttonName="REGISTER"
                         onClick={registerAct
                             ? () => {
-                                registerUser();
+                                userRegister();
                               }
                             : () => {}}
                       />
