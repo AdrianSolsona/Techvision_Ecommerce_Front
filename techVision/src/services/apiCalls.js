@@ -103,6 +103,55 @@ export const deleteMyAddress = async (id, token) => {
   return await axios.delete(`${root}address/${id}`, config);
 }
 
+export const ProductBuy = async ( body, token) => {
+  let config = {
+    headers: { 
+      'Authorization': 'Bearer '+ token,  
+    }
+  };
+
+  return await axios.post(`${root}buys`, body, config);
+}
+
+export const CartBuy = async ( token ) => {
+  let config = {
+    headers: { 
+      'Authorization': 'Bearer '+ token,  
+    }
+  };
+
+  return await axios.get(`${root}buys/cart`, config);
+}
+
+export const DeleteItemBuy= async ( id, token ) => {
+  let config = {
+    headers: { 
+      'Authorization': 'Bearer '+ token,  
+    }
+  };
+
+  return await axios.delete(`${root}buys/${id}`, config);
+}
+
+export const AllInfoBuy = async ( token ) => {
+  let config = {
+    headers: { 
+      'Authorization': 'Bearer '+ token,  
+    }
+  };
+
+  return await axios.get(`${root}buys/info`, config);
+}
+
+export const ChangeOrder = async ( id, token ) => {
+  let config = {
+    headers: { 
+      'Authorization': 'Bearer '+ token,  
+    }
+  };
+
+  return await axios.put(`${root}orders/buys/${id}`, config);
+}
 
 
 
