@@ -16,10 +16,10 @@ import { Navigator } from '../../components/Navigator/Navigator';
 export const Login = () => {
   
   const navigate = useNavigate();
-
+  
   const dispatch = useDispatch();
   const credentialsRdx = useSelector(userData);
-
+  console.log(userData)
   const [credenciales, setCredenciales] = useState({
     email: "",
     password: "",
@@ -73,7 +73,7 @@ export const Login = () => {
                 setWelcome(`WELCOME BACK!`);
                 
                 setTimeout(() => {
-                  navigate("/");
+                  navigate("/profile");
                 }, 2000);
                     }
                 )
