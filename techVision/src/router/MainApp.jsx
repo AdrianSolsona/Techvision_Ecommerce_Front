@@ -11,6 +11,8 @@ import { OrderUser } from '../layout/orderUser/OrderUser'
 import { NewShipping } from '../layout/newShipping/NewShipping'
 import { ModifyAddress } from '../layout/modifyAddress/ModifyAddress'
 import { ProductDetail } from '../layout/productDetail/ProductDetail'
+import { Contact } from '../layout/contact/contact'
+import { Cart } from '../layout/Cart/Cart'
 
 
 export const MainApp = () => {
@@ -28,6 +30,8 @@ export const MainApp = () => {
         <Route path='/new/shipping' element={<NewShipping/>}/>
         <Route path='/modify/address' element={<ModifyAddress/>}/>
         <Route path='/product' element={<ProductDetail/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+        <Route path='/cart' element={<Cart/>}/>
     </Routes>
     </>
   )
