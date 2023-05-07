@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const root = "https://techvisionecommerce-production.up.railway.app"
+const root = "https://techvisionecommerce-production.up.railway.app/"
 
 export const logMe = async(body) => {
     return await axios.post(`${root}login`, body)
