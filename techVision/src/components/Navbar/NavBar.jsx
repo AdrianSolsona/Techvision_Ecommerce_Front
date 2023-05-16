@@ -21,6 +21,7 @@ export const NavBar = () => {
 
     const logoutFunction = () => {
       dispatch(userout({credentials: {}, token: ""}))
+      localStorage.clear();
       
     }
 

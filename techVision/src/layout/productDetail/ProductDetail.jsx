@@ -13,6 +13,9 @@ import { ProductBuy } from '../../services/apiCalls';
 import { Navigator } from '../../components/Navigator/Navigator';
 import { useNavigate } from 'react-router-dom';
 import { userData } from '../userSlice';
+import { addChoosenProduct } from '../productSlice';
+
+
 
 
 export const ProductDetail = () =>  {
@@ -20,22 +23,33 @@ export const ProductDetail = () =>  {
     const credentialsRdx = useSelector(userData);
     const dataProducts = useSelector(detailData);
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+    
 
     const [infoBuy, setBuy] = useState({
         user_id: credentialsRdx.credentials.decodificado.userId,
         product_id: dataProducts.choosenObject.id,
     
-      });
+    });
 
-    const addBuy = () => {
+      
     
+    const addBuy = () => {
         ProductBuy(infoBuy,credentialsRdx.credentials.token);
         setTimeout(()=>{
           
           navigate("/cart");
       },1000)
       };
-    
+
+      const selectedProduct = (product) => {
+        
+        dispatch(addChoosenProduct({choosenObjectProduct: product}))
+        
+        setTimeout(()=>{
+            navigate(`/cart`);
+        },500)
+    }
 
     return(
         <>
@@ -47,8 +61,9 @@ export const ProductDetail = () =>  {
                     <div className='description-detail'>{dataProducts.choosenObject.description}</div>
                     <div className='all-btn-detail'>
                         <Button onClick={
-                  () => { 
-                    addBuy();
+                  () => {
+                    selectedProduct(dataProducts.choosenObject) 
+                    /*addBuy();*/
               }
                 } variant="primary" size="lg" className='btn-detail'>
                             <div className='buy-detail-logo'><i class="bi bi-cart2 cart-buy-det"></i><div>Add to cart</div></div>

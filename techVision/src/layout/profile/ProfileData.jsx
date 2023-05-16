@@ -27,10 +27,8 @@ export const ProfileData = () => {
     
 
     const ReduxCredentials = useSelector(userData);
-    console.log(ReduxCredentials)
     
     const addressSelectedRdx = useSelector(addressDataAll)
-    console.log(addressSelectedRdx)
    
 
     const dispatch = useDispatch();

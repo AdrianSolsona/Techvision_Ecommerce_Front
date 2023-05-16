@@ -6,12 +6,14 @@ import storage from 'redux-persist/lib/storage';
 import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
 import thunk from 'redux-thunk';
+import productSlice from '../layout/productSlice';
 
 
 const reducers = combineReducers({
     user: userSlice,
     address : addressSlice,
-    detail : detailSlice
+    detail : detailSlice,
+    product : productSlice
     
 })
 

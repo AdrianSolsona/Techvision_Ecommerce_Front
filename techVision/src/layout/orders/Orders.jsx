@@ -9,6 +9,7 @@ import { AllOrderUsers } from '../../services/apiCalls';
 import Moment from 'moment';
 import { CardOrder } from '../../components/CardOrder/CardOrder';
 
+
 export const OrderUsers = () =>  {
 
     const [orders, setOrders] = useState([]);
@@ -69,6 +70,7 @@ export const OrderUsers = () =>  {
                         />
                 ))}
             </div>
+           
             <Footer/>
         </>
     );

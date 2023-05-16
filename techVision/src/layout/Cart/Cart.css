@@ -48,6 +48,7 @@
     display: flex;
     justify-content: center;
     margin-top: 7rem;
+    
 }
 .btn-purchase{
     display: flex;
@@ -60,7 +61,7 @@
     border: 1px solid rgb(118,118,118);
     color: black;
     width: 15rem;
-    margin-top: 4rem;
+    margin-top: 2.8rem;
 }
 .purchase-items:hover{
     background-color: rgb(138, 138, 138);
@@ -93,4 +94,13 @@
     text-decoration: underline;
     color: black;
     cursor: pointer;
+}
+.total-btn-purchase{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.clean-button{
+    display: flex;
+    justify-content: center;  
 }

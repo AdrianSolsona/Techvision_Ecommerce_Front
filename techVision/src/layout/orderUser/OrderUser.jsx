@@ -9,6 +9,7 @@ import Table from 'react-bootstrap/Table';
 import Moment from 'moment';
 import { CardOrderUser } from '../../components/CardOrderUser/CardOrderUser';
 
+
 export const OrderUser = () =>  {
 
     const [orders, setOrders] = useState([]);
@@ -27,7 +28,6 @@ export const OrderUser = () =>  {
     }, [ReduxCredentials.credentials.token, orders]);
     console.log(orders)
 
-    
     
     return(
         <>
@@ -69,7 +69,8 @@ export const OrderUser = () =>  {
                         tPurchase={item.buys.reduce((total, buy) => total + buy.product.price, 0)}
                         />
                 ))}
-            </div>    
+            </div>  
+              
         <Footer/>
         </>
     )

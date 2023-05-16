@@ -153,5 +153,15 @@ export const ChangeOrder = async ( id, token ) => {
   return await axios.put(`${root}orders/buys/${id}`, config);
 }
 
+export const OrderCart = async ( body, token ) => {
+  let config = {
+    headers: { 
+      'Authorization': 'Bearer '+ token,  
+    }
+  };
+
+  return await axios.post(`${root}orders/create`, body, config);
+}
+
 
 
